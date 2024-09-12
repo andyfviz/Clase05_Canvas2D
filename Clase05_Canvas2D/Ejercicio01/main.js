@@ -14,6 +14,7 @@ function updateCanvasSize() {
   // Al actualizar el tamaño del canvas, automáticamente se "limpia" borrando lo que hayamos renderizado.
   // Por ello en este ejemplo estamos renderizando nuevamente el rectángulo para verlo en pantalla ya que no se está renderizando constantemente por medio de requestAnimationFrame, cuando configuremos eso ya no será necesario llamar la función de dibujo o render aquí.
   renderRectangle();
+  renderEllipse();
 }
 
 
@@ -25,7 +26,14 @@ function renderRectangle() {
 
   /*///// 3.2 Dibujar un rectangulo en el canvas ///*/
   CTX.fillRect(10, 10, 150, 100);
+  /*CTX.ellipse ()*/
   // Sintaxis: CTX.fillRect(x, y, width, height);
+
+}
+function renderEllipse(){
+  CTX.fillStyle = "red";
+  CTX.ellipse(50,350,50,50,0,0,Math.PI);
+  CTX.fill();
 }
 // Documentacion sobre los comandos de dibujo disponibles:
 // https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D
@@ -35,6 +43,7 @@ function renderRectangle() {
 /*///// 4. Ejecutar nuestro código ///*/
 window.addEventListener("resize", updateCanvasSize);
 renderRectangle();
+renderEllipse ();
 
 
 
