@@ -33,6 +33,7 @@ function renderRectangle() {
 function renderEllipse(){
   CTX.fillStyle = "red";
   CTX.ellipse(50,350,50,50,0,0,Math.PI);
+
   CTX.fill();
 }
 // Documentacion sobre los comandos de dibujo disponibles:

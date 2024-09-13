@@ -29,7 +29,7 @@ function renderRectangle() {
   // Mas info sobre la función: https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/clearRect
 
   CTX.fillStyle = "aqua";
-  CTX.fillRect(offsetX, offsetY, 150, 100);
+  CTX.fillRect(offsetX, offsetY, 50, 180);
   
   /*///// 4. Calcular la nueva posicion en x "offsetX" para que en el siguiente frame tenga una posición distinta creando movimiento ///*/
   offsetX = offsetX + 1;
